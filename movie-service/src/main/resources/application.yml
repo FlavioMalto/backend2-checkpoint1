@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: movie
+  config:
+    import: optional:configserver:http://localhost:8888
+  cloud:
+    config:
+      profile: dev
+
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: publicuser
+    url: jdbc:mysql://localhost:3306/db_services_checkpoint1
+    password: publicuser123
+  jpa:
+    hibernate:
+      ddl-auto: update
